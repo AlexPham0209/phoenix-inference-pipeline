@@ -118,12 +118,12 @@ def infer(
     """
     # Set default paths
     if model_path is None:
-        model_path = os.path.join(os.path.dirname(__file__), "checkpoint.pt")
+        model_path = os.path.join(os.path.dirname(__file__), "checkpoints", "checkpoint.pt")
     if gloss_dict_path is None:
         gloss_dict_path = os.path.join(
             os.path.dirname(__file__), "data", "gloss_dict.npy"
         )
-
+        
     # Validate paths
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model checkpoint not found: {model_path}")

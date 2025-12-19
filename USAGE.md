@@ -44,13 +44,18 @@ python inference.py --video_path video.mp4 --device 0
 ```
 inference_package/
 ├── inference.py          # Main inference script
-├── checkpoint.pt         # Model weights
+├── checkpoints/          # Checkpoints
+│   ├── checkpoint.pt    
+│   ├── gloss_to_german.pt
 ├── slr_network.py        # Model architecture
+├── translator.py         # Translator model wrapper
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Full documentation
 ├── modules/              # Model components
 │   ├── resnet.py
 │   ├── BiLSTM.py
+│   ├── translator_model.py
+│   ├── positional_encoding.py
 │   ├── tconv.py
 │   └── criterions.py
 ├── utils/                # Utility functions
@@ -59,6 +64,7 @@ inference_package/
 │   └── video_augmentation.py
 └── data/                 # Data files
     └── gloss_dict.npy
+    └── vocab.json
 ```
 
 ## Notes
